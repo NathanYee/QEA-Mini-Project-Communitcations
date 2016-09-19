@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   2505019,      41267]
-NotebookOptionsPosition[   2503725,      41219]
-NotebookOutlinePosition[   2504058,      41234]
-CellTagsIndexPosition[   2504015,      41231]
+NotebookDataLength[   2505065,      41267]
+NotebookOptionsPosition[   2503771,      41219]
+NotebookOutlinePosition[   2504106,      41234]
+CellTagsIndexPosition[   2504063,      41231]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -57,7 +57,7 @@ Cell[BoxData[{
   3.683282850431534*^9, 3.683282851953952*^9}, {3.683282927206225*^9, 
   3.683282927880684*^9}, {3.683283223223445*^9, 3.6832832499479637`*^9}, {
   3.6832851733659763`*^9, 3.6832851735223417`*^9}, {3.683288194922101*^9, 
-  3.683288224219428*^9}}]
+  3.683288224219428*^9}, {3.683290593925226*^9, 3.683290599917078*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -41218,7 +41218,7 @@ Cell[BoxData["\<\"NathanJared.wav\"\>"], "Output",
 }, Open  ]]
 },
 WindowSize->{636, 1041},
-WindowMargins->{{Automatic, 2}, {2, Automatic}},
+WindowMargins->{{642, Automatic}, {2, Automatic}},
 FrontEndVersion->"11.0 for Linux x86 (64-bit) (July 28, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -41238,34 +41238,34 @@ Cell[CellGroupData[{
 Cell[771, 28, 112, 1, 150, "Title"],
 Cell[CellGroupData[{
 Cell[908, 33, 103, 1, 66, "Chapter"],
-Cell[1014, 36, 1000, 23, 131, "Input"]
+Cell[1014, 36, 1046, 23, 91, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2051, 64, 102, 1, 66, "Chapter"],
-Cell[2156, 67, 303, 5, 121, "Text"],
-Cell[2462, 74, 168, 3, 32, "Input"],
-Cell[2633, 79, 1137, 29, 240, "Input"]
+Cell[2097, 64, 102, 1, 66, "Chapter"],
+Cell[2202, 67, 303, 5, 77, "Text"],
+Cell[2508, 74, 168, 3, 32, "Input"],
+Cell[2679, 79, 1137, 29, 175, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3807, 113, 101, 1, 66, "Chapter"],
-Cell[3911, 116, 699, 21, 195, "Text"],
-Cell[4613, 139, 1264, 30, 152, "Input"],
-Cell[5880, 171, 183, 4, 55, "Text"],
-Cell[6066, 177, 1057, 21, 206, "Input"],
-Cell[7126, 200, 183, 4, 55, "Text"],
-Cell[7312, 206, 651, 17, 155, "Input"]
+Cell[3853, 113, 101, 1, 66, "Chapter"],
+Cell[3957, 116, 699, 21, 173, "Text"],
+Cell[4659, 139, 1264, 30, 128, "Input"],
+Cell[5926, 171, 183, 4, 55, "Text"],
+Cell[6112, 177, 1057, 21, 133, "Input"],
+Cell[7172, 200, 183, 4, 55, "Text"],
+Cell[7358, 206, 651, 17, 107, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8000, 228, 105, 1, 66, "Chapter"],
-Cell[8108, 231, 585, 20, 77, "Text"],
-Cell[8696, 253, 964, 27, 155, "Input"],
+Cell[8046, 228, 105, 1, 66, "Chapter"],
+Cell[8154, 231, 585, 20, 77, "Text"],
+Cell[8742, 253, 964, 27, 155, "Input"],
 Cell[CellGroupData[{
-Cell[9685, 284, 466, 9, 59, "Input"],
-Cell[10154, 295, 2493154, 40907, 130, "Output"]
+Cell[9731, 284, 466, 9, 59, "Input"],
+Cell[10200, 295, 2493154, 40907, 130, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2503345, 41207, 223, 4, 32, "Input"],
-Cell[2503571, 41213, 114, 1, 87, "Output"]
+Cell[2503391, 41207, 223, 4, 32, "Input"],
+Cell[2503617, 41213, 114, 1, 87, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
