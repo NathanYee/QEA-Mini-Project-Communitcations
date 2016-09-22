@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     25955,        670]
-NotebookOptionsPosition[     24103,        608]
-NotebookOutlinePosition[     24459,        624]
-CellTagsIndexPosition[     24416,        621]
+NotebookDataLength[     28208,        721]
+NotebookOptionsPosition[     26146,        651]
+NotebookOutlinePosition[     26502,        667]
+CellTagsIndexPosition[     26459,        664]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -75,16 +75,18 @@ Cell["chunk to index", "Chapter",
 
 Cell["\<\
 fftToIndex takes in an FFT and converts the two highest frequencies to the \
-indexes of frequencies list.
-Takes the indices of the two greatest magnitude frequencies in the FFT and \
-divides them by the baud rate, then subtracts them from our target \
+indexes of frequencies list. First we see how many points we need to take \
+from the fft. This is because a single frequency could have multiple highest \
+values. Takes the indices of our n greatest magnitude frequencies in the FFT \
+and divides them by the baud rate, then subtracts them from our target \
 frequencies, giving us a list of distances. Then, the position of the minimum \
-distance will be the most likely candidate for the signal. Outputs the two \
-indices of the frequencies.\
+distance will be the most likely candidate for the signal. Take union of all \
+indexes to output the two indices of the two highest frequencies.\
 \>", "Text",
  CellChangeTimes->{{3.6832901658852663`*^9, 3.683290239677813*^9}, {
   3.683290317449589*^9, 3.683290317757372*^9}, {3.683492250449638*^9, 
-  3.683492386448957*^9}}],
+  3.683492386448957*^9}, {3.683549427610139*^9, 3.683549575344462*^9}, {
+  3.6835496054534473`*^9, 3.683549630631002*^9}}],
 
 Cell[BoxData[{
  RowBox[{
@@ -416,10 +418,10 @@ Cell[BoxData[
  TemplateBox[{
   "SystemDialogInput","unsupt",
    "\"The \\!\\(\\*RowBox[{\\\"\\\\\\\"RecordSound\\\\\\\"\\\"}]\\) dialog \
-type is not currently supported on this platform.\"",2,18,15,
+type is not currently supported on this platform.\"",2,38,27,
    20714839918038894334,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.6835493273459253`*^9}],
+ CellChangeTimes->{3.6835493273459253`*^9, 3.683549661813076*^9}],
 
 Cell[BoxData[
  TemplateBox[{
@@ -427,9 +429,9 @@ Cell[BoxData[
    "\"Part specification \
 \\!\\(\\*RowBox[{\\\"\\\\\\\"RecordSound\\\\\\\"\\\", \
 \\\"\[LeftDoubleBracket]\\\", \\\"1\\\", \\\"\[RightDoubleBracket]\\\"}]\\) \
-is longer than depth of object.\"",2,18,16,20714839918038894334,"Local"},
+is longer than depth of object.\"",2,38,28,20714839918038894334,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.683549327377211*^9}]
+ CellChangeTimes->{3.6835493273459253`*^9, 3.683549661836335*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -452,9 +454,9 @@ Cell[BoxData[
  TemplateBox[{
   "ListPlay","lsamps",
    "\"The first argument to ListPlay must be a list of samples or a list of \
-lists of samples.\"",2,19,17,20714839918038894334,"Local"},
+lists of samples.\"",2,39,29,20714839918038894334,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.6835493274270906`*^9}],
+ CellChangeTimes->{3.6835493274270906`*^9, 3.683549661882895*^9}],
 
 Cell[BoxData[
  RowBox[{"ListPlay", "[", 
@@ -474,7 +476,8 @@ Cell[BoxData[
    3.6835415756438704`*^9, 3.6835416047117767`*^9}, 3.683542049151216*^9, 
    3.683542093854686*^9, 3.683544593755249*^9, 3.683544626335249*^9, 
    3.683544715456249*^9, 3.6835447479292493`*^9, 3.683544801451249*^9, 
-   3.683544852540249*^9, 3.683545182839738*^9, 3.683549327458033*^9}]
+   3.683544852540249*^9, 3.683545182839738*^9, 3.683549327458033*^9, 
+   3.683549661908506*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -500,35 +503,35 @@ Cell[BoxData[
   "Part","argm",
    "\"\\!\\(\\*RowBox[{\\\"Part\\\"}]\\) called with \\!\\(\\*RowBox[{\\\"0\\\
 \"}]\\) arguments; \\!\\(\\*RowBox[{\\\"1\\\"}]\\) or more arguments are \
-expected.\"",2,20,18,20714839918038894334,"Local"},
+expected.\"",2,40,30,20714839918038894334,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.683549327495214*^9}],
+ CellChangeTimes->{3.683549327495214*^9, 3.6835496619530697`*^9}],
 
 Cell[BoxData[
  TemplateBox[{
   "GeometricMean","vecmat1",
    "\"Argument \\!\\(\\*RowBox[{\\\"Part\\\", \\\"[\\\", \\\"]\\\"}]\\) is \
-neither a non-empty vector nor a non-empty matrix.\"",2,20,19,
+neither a non-empty vector nor a non-empty matrix.\"",2,40,31,
    20714839918038894334,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.683549327527602*^9}],
+ CellChangeTimes->{3.683549327495214*^9, 3.683549661976918*^9}],
 
 Cell[BoxData[
  TemplateBox[{
   "Part","partw",
    "\"Part \\!\\(\\*RowBox[{\\\"1\\\"}]\\) of \\!\\(\\*RowBox[{\\\"{\\\", \
-\\\"}\\\"}]\\) does not exist.\"",2,20,20,20714839918038894334,"Local"},
+\\\"}\\\"}]\\) does not exist.\"",2,40,32,20714839918038894334,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.683549327551365*^9}],
+ CellChangeTimes->{3.683549327495214*^9, 3.683549662008287*^9}],
 
 Cell[BoxData[
  TemplateBox[{
   "Part","partw",
    "\"Part \\!\\(\\*RowBox[{\\\"-\\\", \\\"1\\\"}]\\) of \
-\\!\\(\\*RowBox[{\\\"{\\\", \\\"}\\\"}]\\) does not exist.\"",2,20,21,
+\\!\\(\\*RowBox[{\\\"{\\\", \\\"}\\\"}]\\) does not exist.\"",2,40,33,
    20714839918038894334,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.6835493275836554`*^9}],
+ CellChangeTimes->{3.683549327495214*^9, 3.6835496620326014`*^9}],
 
 Cell[BoxData[
  TemplateBox[{
@@ -541,28 +544,28 @@ RowBox[{RowBox[{\\\"{\\\", \\\"}\\\"}], \\\"\[LeftDoubleBracket]\\\", \
 RowBox[{\\\"-\\\", \\\"1\\\"}], \\\"\[RightDoubleBracket]\\\"}]}]}]}]\\) is \
 not a valid Span specification. A Span specification should be 1, 2, or 3 \
 integers separated by ;;. (Any of the integers can be omitted or replaced \
-with All.)\"",2,20,22,20714839918038894334,"Local"},
+with All.)\"",2,40,34,20714839918038894334,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.683549327608054*^9}],
+ CellChangeTimes->{3.683549327495214*^9, 3.683549662064056*^9}],
 
 Cell[BoxData[
  TemplateBox[{
   "Part","argm",
    "\"\\!\\(\\*RowBox[{\\\"Part\\\"}]\\) called with \\!\\(\\*RowBox[{\\\"0\\\
 \"}]\\) arguments; \\!\\(\\*RowBox[{\\\"1\\\"}]\\) or more arguments are \
-expected.\"",2,20,23,20714839918038894334,"Local"},
+expected.\"",2,40,35,20714839918038894334,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.6835493276400337`*^9}],
+ CellChangeTimes->{3.683549327495214*^9, 3.6835496620888033`*^9}],
 
 Cell[BoxData[
  TemplateBox[{
   "PadLeft","normal",
    "\"Nonatomic expression expected at position \
 \\!\\(\\*RowBox[{\\\"1\\\"}]\\) in \\!\\(\\*RowBox[{\\\"PadLeft\\\", \
-\\\"[\\\", RowBox[{\\\"2\\\", \\\",\\\", \\\"4\\\"}], \\\"]\\\"}]\\).\"",2,20,
-   24,20714839918038894334,"Local"},
+\\\"[\\\", RowBox[{\\\"2\\\", \\\",\\\", \\\"4\\\"}], \\\"]\\\"}]\\).\"",2,40,
+   36,20714839918038894334,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.683549327664258*^9}],
+ CellChangeTimes->{3.683549327495214*^9, 3.6835496621214323`*^9}],
 
 Cell[BoxData[
  TemplateBox[{
@@ -570,9 +573,9 @@ Cell[BoxData[
    "\"\\!\\(\\*RowBox[{\\\"IntegerDigits\\\"}]\\) called with \
 \\!\\(\\*RowBox[{\\\"0\\\"}]\\) arguments; between \
 \\!\\(\\*RowBox[{\\\"1\\\"}]\\) and \\!\\(\\*RowBox[{\\\"3\\\"}]\\) arguments \
-are expected.\"",2,20,25,20714839918038894334,"Local"},
+are expected.\"",2,40,37,20714839918038894334,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.6835493276965933`*^9}],
+ CellChangeTimes->{3.683549327495214*^9, 3.6835496621465807`*^9}],
 
 Cell[BoxData[
  TemplateBox[{
@@ -581,9 +584,9 @@ Cell[BoxData[
 \\!\\(\\*RowBox[{\\\"1\\\"}]\\) in \
 \\!\\(\\*RowBox[{\\\"FromCharacterCode\\\", \\\"[\\\", \
 RowBox[{\\\"IntegerDigits\\\", \\\"[\\\", \\\"]\\\"}], \\\"]\\\"}]\\).\"",2,
-   20,26,20714839918038894334,"Local"},
+   40,38,20714839918038894334,"Local"},
   "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.6835493277219143`*^9}],
+ CellChangeTimes->{3.683549327495214*^9, 3.683549662179002*^9}],
 
 Cell[BoxData[
  RowBox[{"FromCharacterCode", "[", 
@@ -602,7 +605,47 @@ Cell[BoxData[
    3.6835421083041306`*^9, 3.6835421217444744`*^9}, 3.68354252990029*^9, 
    3.68354261134929*^9, {3.6835446320282493`*^9, 3.683544641259249*^9}, {
    3.6835447500982494`*^9, 3.683544763747249*^9}, 3.6835448591992493`*^9, 
-   3.683545188677322*^9, 3.683549327767523*^9}]
+   3.683545188677322*^9, 3.683549327767523*^9, 3.683549662205024*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Use this if you don\[CloseCurlyQuote]t have a microphone", "Chapter",
+ CellChangeTimes->{{3.683549743363348*^9, 3.683549753584416*^9}, 
+   3.683549848876235*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"samplingRate", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{"\"\<BadTest.wav\>\"", ",", "\"\<SampleRate\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"soundData", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{"\"\<BadTest.wav\>\"", ",", "\"\<Data\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"baud", "=", ".7"}], "\[IndentingNewLine]", 
+ RowBox[{"decode", "[", 
+  RowBox[{
+   RowBox[{"truncate", "[", 
+    RowBox[{"soundData", ",", "800"}], "]"}], ",", "baud", ",", 
+   "samplingRate", ",", "frequencies", ",", "matrix"}], "]"}]}], "Input",
+ Evaluatable->False,
+ CellChangeTimes->{{3.683541176879141*^9, 3.683541199430765*^9}, {
+  3.683541239338655*^9, 3.683541286806272*^9}, {3.683541463872035*^9, 
+  3.683541468209186*^9}, {3.6835415554181623`*^9, 3.683541567970739*^9}, {
+  3.683541893565536*^9, 3.683541894821459*^9}, {3.683542265490735*^9, 
+  3.683542271051518*^9}, {3.68354241856737*^9, 3.683542418831266*^9}, {
+  3.683549736443788*^9, 3.683549736693584*^9}}],
+
+Cell[BoxData["0.7`"], "Output",
+ CellChangeTimes->{
+  3.683541568668047*^9, 3.6835418952864513`*^9, {3.6835422667851753`*^9, 
+   3.683542294005931*^9}, 3.683542422662116*^9}]
 }, Open  ]]
 }, Open  ]]
 },
@@ -630,46 +673,54 @@ Cell[878, 31, 2019, 36, 91, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[2934, 72, 99, 1, 66, "Chapter"],
-Cell[3036, 75, 626, 11, 99, "Text"],
-Cell[3665, 88, 2337, 64, 354, "Input"],
-Cell[6005, 154, 263, 5, 55, "Text"],
-Cell[6271, 161, 1842, 45, 209, "Input"],
-Cell[8116, 208, 927, 24, 104, "Input"],
-Cell[9046, 234, 1263, 30, 107, "Input"],
-Cell[10312, 266, 119, 2, 30, "Input"],
-Cell[10434, 270, 863, 22, 107, "Input"],
-Cell[11300, 294, 164, 2, 50, "Input"]
+Cell[3036, 75, 895, 13, 121, "Text"],
+Cell[3934, 90, 2337, 64, 354, "Input"],
+Cell[6274, 156, 263, 5, 55, "Text"],
+Cell[6540, 163, 1842, 45, 209, "Input"],
+Cell[8385, 210, 927, 24, 104, "Input"],
+Cell[9315, 236, 1263, 30, 107, "Input"],
+Cell[10581, 268, 119, 2, 30, "Input"],
+Cell[10703, 272, 863, 22, 107, "Input"],
+Cell[11569, 296, 164, 2, 50, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11501, 301, 97, 1, 66, "Chapter"],
-Cell[11601, 304, 835, 24, 139, "Input"],
-Cell[12439, 330, 1458, 40, 149, "Input"]
+Cell[11770, 303, 97, 1, 66, "Chapter"],
+Cell[11870, 306, 835, 24, 139, "Input"],
+Cell[12708, 332, 1458, 40, 149, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[13934, 375, 104, 1, 66, "Chapter"],
-Cell[14041, 378, 775, 14, 32, "Input"],
+Cell[14203, 377, 104, 1, 66, "Chapter"],
+Cell[14310, 380, 775, 14, 32, "Input"],
 Cell[CellGroupData[{
-Cell[14841, 396, 886, 16, 32, "Input"],
-Cell[15730, 414, 318, 7, 23, "Message"],
-Cell[16051, 423, 364, 8, 23, "Message"]
+Cell[15110, 398, 886, 16, 32, "Input"],
+Cell[15999, 416, 340, 7, 23, "Message"],
+Cell[16342, 425, 388, 8, 23, "Message"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[16452, 436, 751, 12, 35, "Input"],
-Cell[17206, 450, 274, 6, 23, "Message"],
-Cell[17483, 458, 1117, 18, 32, "Output"]
+Cell[16767, 438, 751, 12, 35, "Input"],
+Cell[17521, 452, 296, 6, 23, "Message"],
+Cell[17820, 460, 1143, 19, 32, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[18637, 481, 748, 14, 55, "Input"],
-Cell[19388, 497, 334, 7, 23, "Message"],
-Cell[19725, 506, 314, 7, 23, "Message"],
-Cell[20042, 515, 278, 6, 23, "Message"],
-Cell[20323, 523, 295, 7, 23, "Message"],
-Cell[20621, 532, 793, 13, 41, "Message"],
-Cell[21417, 547, 336, 7, 23, "Message"],
-Cell[21756, 556, 370, 8, 23, "Message"],
-Cell[22129, 566, 392, 8, 23, "Message"],
-Cell[22524, 576, 419, 9, 23, "Message"],
-Cell[22946, 587, 1129, 17, 65, "Output"]
+Cell[19000, 484, 748, 14, 55, "Input"],
+Cell[19751, 500, 358, 7, 23, "Message"],
+Cell[20112, 509, 336, 7, 23, "Message"],
+Cell[20451, 518, 300, 6, 23, "Message"],
+Cell[20754, 526, 317, 7, 23, "Message"],
+Cell[21074, 535, 815, 13, 41, "Message"],
+Cell[21892, 550, 358, 7, 23, "Message"],
+Cell[22253, 559, 394, 8, 23, "Message"],
+Cell[22650, 569, 414, 8, 23, "Message"],
+Cell[23067, 579, 439, 9, 23, "Message"],
+Cell[23509, 590, 1151, 17, 32, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24709, 613, 167, 2, 66, "Chapter"],
+Cell[CellGroupData[{
+Cell[24901, 619, 1040, 23, 95, "Input",
+ Evaluatable->False],
+Cell[25944, 644, 174, 3, 30, "Output"]
 }, Open  ]]
 }, Open  ]]
 }
